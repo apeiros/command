@@ -1,0 +1,41 @@
+= MAIN
+
+== Terminology
+Example: `baretest run -i --formatter cli somefile/to/run.rb`
+
+* Command:      words before any flags/options - determine what you want to do
+                options and arguments can be command-specific.
+                In the example, 'run' is a command.
+* Option:       Short and Long options
+* Short option: An option consisting only of a dash and the option-character.
+                The option-character may be any alphanumeric character (A-Za-z0-9)
+                In the example, '-i' is a short option.
+                Short options can be "stacked".
+                Examples:
+                  '-a -b -c' is equivalent to '-abc'
+                  '-a foo -c bar' is equivalent to '-ac foo bar'
+                Important: you can only stack options which have either no
+                value or a required value. You must not stack options with
+                optional value.
+* Long option:  An option consisting of a double-dash and the option identifier.
+                The option identifier must start with an alphanumeric character
+                and may be between 0 and 255 chars long and may contain any
+                alphanumeric character or dash (A-Za-z0-9-)
+                In the example, "--formatter" is a long option.
+* Value:        Options can have no, an optional or a required value.
+                A value may be either a word or a quoted string (shell rules apply)
+                In the example, "cli" is the value of the "--formatter" option.
+* Argument:     Arguments are the rest in the argv array.
+                In the example, "somefile/to/run.rb" is an argument.
+                Arguments may be separated from commands and options by a "--"
+                F.ex.: "baretest -- -f" - '-f' is an argument there and not an
+                option.
+
+== Things to remember:
+* "--" marks the end of options-part
+* "-abc" arg1 arg2 arg3 is the equivalent to -a arg1 -b arg2 -c arg3 (only possible with fixed arity)
+* commands can define additional options
+* options can define additional options
+
+commands:
+  commands MUST be the first values in argv, no flags before/in-between allowed

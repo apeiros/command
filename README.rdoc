@@ -1,0 +1,27 @@
+= Command
+
+
+
+== Summary
+
+A command-line option parser library, satisfying the special needs of baretest.
+
+
+== Description
+
+'Command' is a processor for argv arrays, allowing a lot of flexibility and
+providing a very dense DSL. It was created to satisfy the special needs of
+baretest, specifically late-loading of option definitions (let an option define
+new options)
+
+
+
+== Credits & Contributions
+
+Currently none. This is your chance, contribute and get a mention!
+
+
+
+== Known bugs
+
+Currently none.
