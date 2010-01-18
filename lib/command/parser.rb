@@ -51,11 +51,46 @@ module Command
       @command
     end
 
+    def normalize_arguments!
+      options    = @definition[@command].options_by_flag
+      parse_argv = @arguments
+      @arguments = []
+      while arg = parse_argv.shift
+        if arg =~ /\A-([^-]{2,})/ then
+          flags  = $1
+          until flags.empty?
+            flag = flags.slice!(0,1)
+            if opt  = options["-#{flag}"] then
+              case opt.necessity
+                when :required
+                  @arguments << "-#{flag}"
+                  @arguments << flags unless flags.empty?
+                  flags = ""
+                when :optional
+                  raise "Invalid option - can't merge short options with optional arguments"
+                when :none
+                  @arguments << "-#{flag}"
+                else
+                  raise "Unknown necessity #{opt.necessity.inspect} for option #{opt}"
+              end
+            else
+              @arguments << "-#{flag}#{flags}"
+            end
+          end
+        else
+          @arguments << arg
+        end
+      end
+    end
+
     def options!(*flags)
       ignore_invalid_options = flags.delete(:ignore_invalid_options)
       options                = @definition[@command].options_by_flag # options available to this command
       env                    = @definition[@command].env_by_variable # options available to this command
       defaults               = @definition[@command].default_options # options available to this command
+
+      normalize_arguments!
+
       parse_argv             = @arguments
       @arguments             = []
 
