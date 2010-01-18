@@ -7,5 +7,5 @@
 
 
 module Command
-  Env = Struct.new(:map, :name)
+  Env = Struct.new(:name, :variable)
 end

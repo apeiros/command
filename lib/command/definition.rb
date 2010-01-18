@@ -14,6 +14,16 @@ module Command
     NegationSequence       = /\[(?:no-|with-|without-)\]/
     LongOption             = /\A--[A-Za-z0-9][A-Za-z0-9_-]*(?: #{OptionArgument})?\z/
 
+    def self.create_argument(*args)
+      name        = Symbol === args.first && args.shift
+      usage       = args.shift
+      bare        = usage[/\w+/]
+      type        = Symbol === args.first && args.shift
+      description = args.shift
+
+      Argument.new(name, bare, usage, type, description)
+    end
+
     # valid arguments:
     #   name # --> copy from parent
     #   name, short[, long][, type][, description]
@@ -110,29 +120,32 @@ module Command
 
     attr_reader :arguments
     attr_reader :arguments_by_name
+    attr_reader :default_options
     attr_reader :options_by_name
     attr_reader :options_by_flag
     attr_reader :commands_by_name
     attr_reader :default_command
     attr_reader :argument_position
+    attr_reader :env_by_variable
     attr_reader :parent # parent= must update the DecoratingHashes
 
     def initialize(parent=nil, default_command=nil, default_options={}, &block)
       @default_command   = default_command
-      @default_options   = default_options
+      @default_options   = DecoratingHash.new(@parent && @parent.default_options).update(default_options)
       @elements          = []
       @parent            = parent
       @arguments_by_name = DecoratingHash.new(@parent && @parent.arguments_by_name)
       @options_by_name   = DecoratingHash.new(@parent && @parent.options_by_name)
       @options_by_flag   = DecoratingHash.new(@parent && @parent.options_by_flag)
       @commands_by_name  = DecoratingHash.new(@parent && @parent.commands_by_name)
+      @env_by_variable   = DecoratingHash.new(@parent && @parent.env_by_variable)
       @argument_position = {}
       @text              = []
       instance_eval(&block) if block
     end
 
     def [](command)
-      @commands_by_name[command]
+      command ? @commands_by_name[command] : self
     end
 
     def usage_text
@@ -143,11 +156,11 @@ module Command
         a.declaration.size <=> b.declaration.size
       }
       longest_env_name = @elements.grep(Env).max { |a,b|
-        a.name.size <=> b.name.size
+        a.variable.size <=> b.variable.size
       }
       longest_arg_bare = longest_arg_bare && longest_arg_bare.bare.size
       longest_option   = longest_option && longest_option.declaration.size
-      longest_env_name = longest_env_name && longest_env_name.name.size
+      longest_env_name = longest_env_name && longest_env_name.variable.size
       arguments = @elements.grep(Argument)
 
       @elements.map { |e|
@@ -164,8 +177,8 @@ module Command
           when Env
             sprintf "* %*s%s\n",
                     -longest_env_name-2,
-                    e.name,
-                    @options_by_name[e.map].description
+                    e.variable,
+                    @options_by_name[e.name].description
           when String
             e+"\n"
           when Argument
@@ -173,7 +186,7 @@ module Command
             sprintf "  %*s%s\n",
                     -(longest_arg_bare+3),
                     "#{e.bare}:",
-                    e.description.gsub(/\n/, indent)
+                    e.description.to_s.gsub(/\n/, indent)
           when Definition
           else
             "unimplemented(#{e.class})"
@@ -193,25 +206,29 @@ module Command
       if args.size == 1 then
         argument   = @arguments_by_name[args.first]
         raise ArgumentError, "No argument with name #{args.first.inspect} in any parent found." unless argument
-        @elements << argument
-
-        argument
       else
-        name        = Symbol === args.first && args.shift
-        usage       = args.shift
-        position    = @arguments_by_name.size
-        bare        = usage[/\w+/]
-        type        = args.shift
-        description = args.shift
-        argument    = Argument.new(name, bare, usage, type, description)
-        @elements  << argument
-        @arguments_by_name[name] = argument
-
-        argument
+        argument    = self.class.create_argument(*args)
+        @arguments_by_name[argument.name] = argument
       end
+      @elements << argument
+
+      argument
     end
 
-    def option(*args, &block)
+    def virtual_argument(*args)
+      if args.size == 1 then
+        argument   = @arguments_by_name[args.first]
+        raise ArgumentError, "No argument with name #{args.first.inspect} in any parent found." unless argument
+      else
+        argument    = self.class.create_argument(*args)
+        @arguments_by_name[argument.name] = argument
+      end
+
+      @elements << argument
+      argument
+    end
+
+    def option(*args)
       if args.size == 1 then
         inherited_option = @options_by_name[args.first]
         raise ArgumentError, "No inherited option #{args.first.inspect}" unless inherited_option
@@ -219,7 +236,7 @@ module Command
 
         inherited_option
       else
-        option = self.class.create_option(*args, &block)
+        option = self.class.create_option(*args)
 
         @options_by_name[option.name]    = option
         @options_by_flag[option.short]   = option
@@ -247,8 +264,10 @@ module Command
       @elements << identifier
     end
 
-    def env_option(map, name)
-      @elements << Env.new(map, name)
+    def env_option(name, variable)
+      env = Env.new(name, variable)
+      @env_by_variable[variable] = env
+      @elements << env
     end
 
     def command(*args, &block)

@@ -27,4 +27,10 @@ module Command
     @main = Definition.new(*args, &block)
     @main
   end
+
+  def self.with(argv, &block)
+    parser = Parser.new($command, argv)
+    parser.instance_eval(&block)
+    parser
+  end
 end

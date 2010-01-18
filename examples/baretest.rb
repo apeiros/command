@@ -8,8 +8,8 @@ require 'command'
 # Specify commands and options
 Command "run" do
   # global arguments
-  argument :command, '[command]', :Virtual, "The command to run. See `baretest commands`"
-  argument :options, '[options]', :Virtual, "The flags and options, see in the \"Options\" section."
+  virtual_argument :command, '[command]', "The command to run. See `baretest commands`"
+  virtual_argument :options, '[options]', "The flags and options, see in the \"Options\" section."
 
   # global options
   o :commands,    nil,  '--commands', :Boolean, "overview over the commands"
@@ -20,8 +20,8 @@ Command "run" do
   command "run", :format => 'cli', :interactive => false, :verbose => false do
     usage
 
-    argument :command
-    argument :options
+    virtual_argument :command
+    virtual_argument :options
     argument '*glob', File, "The testfiles to run.\n" \
                             "Defaults to 'test/{suite,unit,integration,system}/**/*.rb'\n" \
                             "Providing a directory is equivalent to dir/**/*.rb"
