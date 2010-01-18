@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Command::Parser</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/command/parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/command/parser.rb">lib/command/parser.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000019">::new</a></li>
+					
+					<li><a href="#M000020">#argument</a></li>
+					
+					<li><a href="#M000022">#arguments</a></li>
+					
+					<li><a href="#M000021">#option</a></li>
+					
+					<li><a href="#M000023">#parse</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../MANIFEST_txt.html">MANIFEST.txt</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/Notes_rdoc.html">Notes.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Command.html">Command</a></li>
+				
+					<li><a href="../Command/DecoratingHash.html">Command::DecoratingHash</a></li>
+				
+					<li><a href="../Command/Definition.html">Command::Definition</a></li>
+				
+					<li><a href="../Command/DirectoryNotFoundError.html">Command::DirectoryNotFoundError</a></li>
+				
+					<li><a href="../Command/FileNotFoundError.html">Command::FileNotFoundError</a></li>
+				
+					<li><a href="../Command/NoDirectoryError.html">Command::NoDirectoryError</a></li>
+				
+					<li><a href="../Command/NoFileError.html">Command::NoFileError</a></li>
+				
+					<li><a href="../Command/Parser.html">Command::Parser</a></li>
+				
+					<li><a href="../Command/VERSION.html">Command::VERSION</a></li>
+				
+					<li><a href="../Kernel.html">Kernel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Command::Parser</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="Token">Token</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="command-attribute-method" class="method-detail">
+				<a name="command"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">command</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="options-attribute-method" class="method-detail">
+				<a name="options"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">options</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="argv-attribute-method" class="method-detail">
+				<a name="argv"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">argv</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000019"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(definition, argv)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/command/parser.rb, line 17</span>
+17:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">definition</span>, <span class="ruby-identifier">argv</span>)
+18:       <span class="ruby-ivar">@definition</span> = <span class="ruby-identifier">definition</span>
+19:       <span class="ruby-ivar">@argv</span>       = <span class="ruby-identifier">argv</span>
+20:       <span class="ruby-ivar">@affix</span>      = [] <span class="ruby-comment cmt"># arguments after '--'</span>
+21:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i</span> = <span class="ruby-identifier">argv</span>.<span class="ruby-identifier">index</span>(<span class="ruby-value str">'--'</span>)
+22:         <span class="ruby-ivar">@affix</span>     = <span class="ruby-identifier">argv</span>[(<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>)<span class="ruby-operator">..</span><span class="ruby-value">-1</span>]
+23:         <span class="ruby-ivar">@arguments</span> = <span class="ruby-identifier">argv</span>.<span class="ruby-identifier">first</span>(<span class="ruby-identifier">i</span>)
+24:       <span class="ruby-keyword kw">else</span>
+25:         <span class="ruby-ivar">@arguments</span> = <span class="ruby-ivar">@argv</span>.<span class="ruby-identifier">dup</span>
+26:       <span class="ruby-keyword kw">end</span>
+27:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="argument-method" class="method-detail ">
+				<a name="M000020"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">argument</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="argument-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/command/parser.rb, line 29</span>
+29:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">argument</span>(<span class="ruby-identifier">name</span>)
+30:       <span class="ruby-identifier">position</span> = <span class="ruby-ivar">@definition</span>.<span class="ruby-identifier">argument_position</span>[<span class="ruby-identifier">name</span>]
+31:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;No argument #{name.inspect} available&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">position</span>
+32:       <span class="ruby-identifier">arguments</span>[<span class="ruby-identifier">position</span>]
+33:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="arguments-method" class="method-detail ">
+				<a name="M000022"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">arguments</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="arguments-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/command/parser.rb, line 39</span>
+39:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arguments</span>
+40:       <span class="ruby-ivar">@arguments</span><span class="ruby-operator">+</span><span class="ruby-ivar">@affix</span>
+41:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="option-method" class="method-detail ">
+				<a name="M000021"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">option</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="option-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/command/parser.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">option</span>(<span class="ruby-identifier">name</span>)
+36:       <span class="ruby-ivar">@options</span>[<span class="ruby-identifier">name</span>]
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="M000023"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(*flags)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/command/parser.rb, line 43</span>
+43:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">flags</span>)
+44:       <span class="ruby-identifier">ignore_invalid_options</span> = <span class="ruby-identifier">flags</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">:ignore_invalid_options</span>)
+45:       <span class="ruby-ivar">@affix</span>      = []
+46:       <span class="ruby-ivar">@parse_argv</span> = <span class="ruby-ivar">@arguments</span>
+47:       <span class="ruby-ivar">@arguments</span>  = []
+48:       <span class="ruby-ivar">@options</span>    = {}
+49: 
+50:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@definition</span>.<span class="ruby-identifier">commands_by_name</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@parse_argv</span>.<span class="ruby-identifier">first</span>)
+51:         <span class="ruby-ivar">@command</span> = <span class="ruby-ivar">@parse_argv</span>.<span class="ruby-identifier">shift</span>
+52:       <span class="ruby-keyword kw">else</span>
+53:         <span class="ruby-ivar">@command</span> = <span class="ruby-ivar">@definition</span>.<span class="ruby-identifier">default_command</span>
+54:       <span class="ruby-keyword kw">end</span>
+55:       <span class="ruby-identifier">options</span>  = (<span class="ruby-ivar">@command</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@definition</span>[<span class="ruby-ivar">@command</span>] <span class="ruby-operator">:</span> <span class="ruby-ivar">@definition</span>).<span class="ruby-identifier">options_by_flag</span> <span class="ruby-comment cmt"># options available to this command</span>
+56: 
+57:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">arg</span> = <span class="ruby-ivar">@parse_argv</span>.<span class="ruby-identifier">shift</span>
+58:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">option</span> = <span class="ruby-identifier">options</span>[<span class="ruby-identifier">arg</span>] <span class="ruby-keyword kw">then</span>
+59:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">necessity</span>
+60:             <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:required</span>
+61:               <span class="ruby-identifier">value</span> = <span class="ruby-identifier">option</span>.<span class="ruby-identifier">process!</span>(<span class="ruby-ivar">@parse_argv</span>.<span class="ruby-identifier">shift</span>)
+62:             <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:optional</span>
+63:               <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@parse_argv</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parse_argv</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/\A-/</span> <span class="ruby-keyword kw">then</span>
+64:                 <span class="ruby-identifier">value</span> = <span class="ruby-identifier">option</span>.<span class="ruby-identifier">process!</span>(<span class="ruby-ivar">@parse_argv</span>.<span class="ruby-identifier">shift</span>)
+65:               <span class="ruby-keyword kw">else</span>
+66:                 <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">true</span>
+67:               <span class="ruby-keyword kw">end</span>
+68:             <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:none</span>
+69:               <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">true</span>
+70:           <span class="ruby-keyword kw">end</span>
+71:           <span class="ruby-ivar">@options</span>[<span class="ruby-identifier">option</span>.<span class="ruby-identifier">name</span>] = (<span class="ruby-identifier">arg</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">option</span>.<span class="ruby-identifier">negated</span>) <span class="ruby-operator">?</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span>
+72:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\A-/</span> <span class="ruby-keyword kw">then</span>
+73:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Invalid option #{arg}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ignore_invalid_options</span>
+74:           <span class="ruby-ivar">@arguments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">arg</span>
+75:         <span class="ruby-keyword kw">else</span>
+76:           <span class="ruby-ivar">@arguments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">arg</span>
+77:         <span class="ruby-keyword kw">end</span>
+78:       <span class="ruby-keyword kw">end</span>
+79: 
+80:       <span class="ruby-ivar">@result</span> = <span class="ruby-constant">Result</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@command</span>, <span class="ruby-ivar">@options</span>, <span class="ruby-identifier">arguments</span><span class="ruby-operator">+</span><span class="ruby-ivar">@affix</span>)
+81:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

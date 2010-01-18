@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Command::Definition</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/command/definition_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/command/definition.rb">lib/command/definition.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000006">::create_option</a></li>
+					
+					<li><a href="#M000007">::new</a></li>
+					
+					<li><a href="#M000008">#[]</a></li>
+					
+					<li><a href="#M000011">#argument</a></li>
+					
+					<li><a href="#M000017">#command</a></li>
+					
+					<li><a href="#M000016">#env_option</a></li>
+					
+					<li><a href="#M000013">#o</a></li>
+					
+					<li><a href="#M000012">#option</a></li>
+					
+					<li><a href="#M000015">#placeholder</a></li>
+					
+					<li><a href="#M000014">#text</a></li>
+					
+					<li><a href="#M000010">#usage</a></li>
+					
+					<li><a href="#M000009">#usage_text</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../MANIFEST_txt.html">MANIFEST.txt</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/Notes_rdoc.html">Notes.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Command.html">Command</a></li>
+				
+					<li><a href="../Command/DecoratingHash.html">Command::DecoratingHash</a></li>
+				
+					<li><a href="../Command/Definition.html">Command::Definition</a></li>
+				
+					<li><a href="../Command/DirectoryNotFoundError.html">Command::DirectoryNotFoundError</a></li>
+				
+					<li><a href="../Command/FileNotFoundError.html">Command::FileNotFoundError</a></li>
+				
+					<li><a href="../Command/NoDirectoryError.html">Command::NoDirectoryError</a></li>
+				
+					<li><a href="../Command/NoFileError.html">Command::NoFileError</a></li>
+				
+					<li><a href="../Command/Parser.html">Command::Parser</a></li>
+				
+					<li><a href="../Command/VERSION.html">Command::VERSION</a></li>
+				
+					<li><a href="../Kernel.html">Kernel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Command::Definition</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="RequiredOptionArgument">RequiredOptionArgument</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+				<dt><a name="OptionArgument">OptionArgument</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+				<dt><a name="ShortOption">ShortOption</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+				<dt><a name="NegationSequence">NegationSequence</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+				<dt><a name="LongOption">LongOption</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="arguments-attribute-method" class="method-detail">
+				<a name="arguments"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">arguments</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="arguments-by-name-attribute-method" class="method-detail">
+				<a name="arguments_by_name"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">arguments_by_name</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="options-by-name-attribute-method" class="method-detail">
+				<a name="options_by_name"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">options_by_name</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="options-by-flag-attribute-method" class="method-detail">
+				<a name="options_by_flag"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">options_by_flag</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="commands-by-name-attribute-method" class="method-detail">
+				<a name="commands_by_name"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">commands_by_name</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="default-command-attribute-method" class="method-detail">
+				<a name="default_command"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">default_command</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="argument-position-attribute-method" class="method-detail">
+				<a name="argument_position"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">argument_position</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+			<div id="parent-attribute-method" class="method-detail">
+				<a name="parent"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">parent</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p class="missing-docs">(Not documented)</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="create-option-method" class="method-detail ">
+				<a name="M000006"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_option</span><span
+						class="method-args">(name, *args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+valid arguments:
+</p>
+<pre>
+  name # --&gt; copy from parent
+  name, short[, long][, type][, description]
+  name, long[, type][, description]
+</pre>
+<p>
+short can be
+</p>
+<ul>
+<li>&#8217;-?&#8217; (short option without argument)
+
+</li>
+<li>&#8217;-? REQUIRED&#8217; (short option with required argument)
+
+</li>
+<li>&#8217;-? [OPTIONAL]&#8217; (short option with optional
+
+</li>
+</ul>
+<p>
+where ? is any of A-Za-z examples:
+</p>
+<ul>
+<li>&#8217;-a&#8217;
+
+</li>
+<li>&#8217;-a [OPTIONAL_ARG]&#8217;
+
+</li>
+<li>&#8217;-a REQUIRED_ARG&#8216;
+
+</li>
+</ul>
+<p>
+long can be
+</p>
+<ul>
+<li>&#8217;&#8212;?&#8217; (short option without argument)
+
+</li>
+<li>&#8217;&#8212;? REQUIRED&#8217; (short option with required argument)
+
+</li>
+<li>&#8217;&#8212;? [OPTIONAL]&#8217; (short option with optional
+
+</li>
+</ul>
+<p>
+where ? is [A-Za-z0-9][A-Za-z0-9-_]* It may contain a negation sequence,
+which is one of &#8217;[no-]&#8217;, &#8217;[with-]&#8217;,
+&#8217;[without-]&#8217; examples:
+</p>
+<ul>
+<li>&#8217;&#8212;colored&#8217;
+
+</li>
+<li>&#8217;&#8212;[no-]colors&#8217;
+
+</li>
+<li>&#8217;&#8212;port PORT&#8217;
+
+</li>
+<li>&#8217;&#8212;foo [OPTIONAL_ARG]&#8217;
+
+</li>
+</ul>
+<p>
+Only one of short and long may have the argument declared. Usually
+you&#8217;ll have the argument in long and only have it in short if
+there&#8217;s no long at all.
+</p>
+<p>
+type can be
+</p>
+<ul>
+<li>:Virtual
+
+</li>
+<li>:Boolean
+
+</li>
+<li>:String (default)
+
+</li>
+<li>:Integer
+
+</li>
+<li>:Float
+
+</li>
+<li>:Octal
+
+</li>
+<li>:Hex
+
+</li>
+<li>:File - requires the provided path to exist and be a file
+
+</li>
+<li>:Directory - requires the provided path to exist and be a directory
+
+</li>
+<li>:Path
+
+</li>
+</ul>
+<p>
+Exceptions (incomplete):
+</p>
+<ul>
+<li>ArgumentError with single argument if it doesn&#8217;t identify an
+inheritable option
+
+</li>
+<li>ArgumentError on invalid short definition
+
+</li>
+<li>ArgumentError on invalid long definition
+
+</li>
+<li>ArgumentError on option argument declaration in both, short and long
+definition
+
+</li>
+<li>ArgumentError on invalid/unsupported type
+
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="create-option-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 66</span>
+ 66:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_option</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+ 67:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-regexp re">/\A-[^- ]/</span> <span class="ruby-keyword kw">then</span>
+ 68:         <span class="ruby-identifier">short</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+ 69:       <span class="ruby-keyword kw">end</span>
+ 70:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-regexp re">/\A--[^- ]/</span> <span class="ruby-keyword kw">then</span>
+ 71:         <span class="ruby-identifier">long</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+ 72:       <span class="ruby-keyword kw">end</span>
+ 73:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-constant">Symbol</span> <span class="ruby-keyword kw">then</span>
+ 74:         <span class="ruby-identifier">type</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+ 75:       <span class="ruby-keyword kw">end</span>
+ 76:       <span class="ruby-identifier">declaration</span> = <span class="ruby-identifier">short</span> <span class="ruby-value">? </span>[<span class="ruby-identifier">short</span>,<span class="ruby-identifier">long</span>].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;, &quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-node">&quot;    #{long}&quot;</span>
+ 77:       <span class="ruby-identifier">description</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+ 78: 
+ 79:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Too many arguments&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span>
+ 80:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid short declaration: #{short.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> (<span class="ruby-identifier">short</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">short</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">ShortOption</span>)
+ 81:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Invalid long declaration: #{long.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> (<span class="ruby-identifier">long</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">long</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">LongOption</span>)
+ 82:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Argument declaration must only be in one of short and long&quot;</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">short</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">long</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">short</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\s/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">long</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\s/</span>)
+ 83: 
+ 84:       <span class="ruby-identifier">necessity</span>        = <span class="ruby-identifier">:none</span>
+ 85:       <span class="ruby-identifier">extract_argument</span> = <span class="ruby-keyword kw">nil</span>
+ 86:       <span class="ruby-identifier">extract_argument</span> = <span class="ruby-identifier">short</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">short</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\s/</span>
+ 87:       <span class="ruby-identifier">extract_argument</span> = <span class="ruby-identifier">long</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">long</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\s/</span>
+ 88:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">extract_argument</span> <span class="ruby-keyword kw">then</span>
+ 89:         <span class="ruby-identifier">flag</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">argument</span> = <span class="ruby-identifier">extract_argument</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/ /</span>)
+ 90:         <span class="ruby-identifier">extract_argument</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">flag</span>) <span class="ruby-comment cmt"># long/short should only contain the flag, not the argument declaration as well</span>
+ 91:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Multiple arguments for an option not yet supported&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+ 92:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">empty?</span>
+ 93:           <span class="ruby-identifier">necessity</span> = <span class="ruby-identifier">:none</span>
+ 94:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">argument</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\A\[.*\]\z/</span> <span class="ruby-keyword kw">then</span>
+ 95:           <span class="ruby-identifier">necessity</span> = <span class="ruby-identifier">:optional</span>
+ 96:         <span class="ruby-keyword kw">else</span>
+ 97:           <span class="ruby-identifier">necessity</span> = <span class="ruby-identifier">:required</span>
+ 98:         <span class="ruby-keyword kw">end</span>
+ 99:       <span class="ruby-keyword kw">end</span>
+100: 
+101:       <span class="ruby-identifier">negated</span> = <span class="ruby-keyword kw">nil</span>
+102:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">long</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">NegationSequence</span> <span class="ruby-keyword kw">then</span>
+103:         <span class="ruby-identifier">negated</span> = <span class="ruby-identifier">long</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value str">'[]'</span>)
+104:         <span class="ruby-identifier">long</span>    = <span class="ruby-identifier">long</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">NegationSequence</span>, <span class="ruby-value str">''</span>)
+105:       <span class="ruby-keyword kw">end</span>
+106: 
+107:       <span class="ruby-constant">Option</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">short</span>, <span class="ruby-identifier">long</span>, <span class="ruby-identifier">negated</span>, <span class="ruby-identifier">necessity</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">declaration</span>, <span class="ruby-identifier">description</span>)
+108:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="M000007"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(parent=nil, default_command=nil, default_options={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 120</span>
+120:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">parent</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">default_command</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">default_options</span>={}, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+121:       <span class="ruby-ivar">@default_command</span>   = <span class="ruby-identifier">default_command</span>
+122:       <span class="ruby-ivar">@default_options</span>   = <span class="ruby-identifier">default_options</span>
+123:       <span class="ruby-ivar">@elements</span>          = []
+124:       <span class="ruby-ivar">@parent</span>            = <span class="ruby-identifier">parent</span>
+125:       <span class="ruby-ivar">@arguments_by_name</span> = <span class="ruby-constant">DecoratingHash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">arguments_by_name</span>)
+126:       <span class="ruby-ivar">@options_by_name</span>   = <span class="ruby-constant">DecoratingHash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">options_by_name</span>)
+127:       <span class="ruby-ivar">@options_by_flag</span>   = <span class="ruby-constant">DecoratingHash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">options_by_flag</span>)
+128:       <span class="ruby-ivar">@commands_by_name</span>  = <span class="ruby-constant">DecoratingHash</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">commands_by_name</span>)
+129:       <span class="ruby-ivar">@argument_position</span> = {}
+130:       <span class="ruby-ivar">@text</span>              = []
+131:       <span class="ruby-identifier">instance_eval</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>
+132:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="M000008"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]</span><span
+						class="method-args">(command)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 134</span>
+134:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">command</span>)
+135:       <span class="ruby-ivar">@commands_by_name</span>[<span class="ruby-identifier">command</span>]
+136:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="argument-method" class="method-detail ">
+				<a name="M000011"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">argument</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="argument-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 188</span>
+188:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">argument</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+189:       <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@argument_position</span>[<span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>]
+190:         <span class="ruby-ivar">@argument_position</span>[<span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-ivar">@argument_position</span>.<span class="ruby-identifier">size</span>
+191:       <span class="ruby-keyword kw">end</span>
+192: 
+193:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">then</span>
+194:         <span class="ruby-identifier">argument</span>   = <span class="ruby-ivar">@arguments_by_name</span>[<span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>]
+195:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;No argument with name #{args.first.inspect} in any parent found.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">argument</span>
+196:         <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">argument</span>
+197: 
+198:         <span class="ruby-identifier">argument</span>
+199:       <span class="ruby-keyword kw">else</span>
+200:         <span class="ruby-identifier">name</span>        = <span class="ruby-constant">Symbol</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+201:         <span class="ruby-identifier">usage</span>       = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+202:         <span class="ruby-identifier">position</span>    = <span class="ruby-ivar">@arguments_by_name</span>.<span class="ruby-identifier">size</span>
+203:         <span class="ruby-identifier">bare</span>        = <span class="ruby-identifier">usage</span>[<span class="ruby-regexp re">/\w+/</span>]
+204:         <span class="ruby-identifier">type</span>        = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+205:         <span class="ruby-identifier">description</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>
+206:         <span class="ruby-identifier">argument</span>    = <span class="ruby-constant">Argument</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">bare</span>, <span class="ruby-identifier">usage</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">description</span>)
+207:         <span class="ruby-ivar">@elements</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">argument</span>
+208:         <span class="ruby-ivar">@arguments_by_name</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">argument</span>
+209: 
+210:         <span class="ruby-identifier">argument</span>
+211:       <span class="ruby-keyword kw">end</span>
+212:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="command-method" class="method-detail ">
+				<a name="M000017"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">command</span><span
+						class="method-args">(*args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="command-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 254</span>
+254:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">command</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+255:       <span class="ruby-identifier">definition</span> = <span class="ruby-constant">Definition</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+256:       <span class="ruby-ivar">@commands_by_name</span>[<span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-identifier">definition</span>
+257:       <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">definition</span>
+258:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="env-option-method" class="method-detail ">
+				<a name="M000016"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">env_option</span><span
+						class="method-args">(map, name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="env-option-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 250</span>
+250:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">env_option</span>(<span class="ruby-identifier">map</span>, <span class="ruby-identifier">name</span>)
+251:       <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Env</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">map</span>, <span class="ruby-identifier">name</span>)
+252:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="o-method" class="method-detail method-alias">
+				<a name="M000013"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">o</span><span
+						class="method-args">(*args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Alias for <a href="Definition.html#M000012">option</a>
+</p>
+					
+
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="option-method" class="method-detail ">
+				<a name="M000012"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">option</span><span
+						class="method-args">(*args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="option-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 214</span>
+214:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">option</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+215:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">then</span>
+216:         <span class="ruby-identifier">inherited_option</span> = <span class="ruby-ivar">@options_by_name</span>[<span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>]
+217:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;No inherited option #{args.first.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">inherited_option</span>
+218:         <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">inherited_option</span>
+219: 
+220:         <span class="ruby-identifier">inherited_option</span>
+221:       <span class="ruby-keyword kw">else</span>
+222:         <span class="ruby-identifier">option</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">create_option</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+223: 
+224:         <span class="ruby-ivar">@options_by_name</span>[<span class="ruby-identifier">option</span>.<span class="ruby-identifier">name</span>]    = <span class="ruby-identifier">option</span>
+225:         <span class="ruby-ivar">@options_by_flag</span>[<span class="ruby-identifier">option</span>.<span class="ruby-identifier">short</span>]   = <span class="ruby-identifier">option</span>
+226:         <span class="ruby-ivar">@options_by_flag</span>[<span class="ruby-identifier">option</span>.<span class="ruby-identifier">long</span>]    = <span class="ruby-identifier">option</span>
+227:         <span class="ruby-ivar">@options_by_flag</span>[<span class="ruby-identifier">option</span>.<span class="ruby-identifier">negated</span>] = <span class="ruby-identifier">option</span>
+228:         <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">option</span>
+229: 
+230:         <span class="ruby-identifier">option</span>
+231:       <span class="ruby-keyword kw">end</span>
+232:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Definition.html#M000013">o</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="placeholder-method" class="method-detail ">
+				<a name="M000015"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">placeholder</span><span
+						class="method-args">(identifier)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="placeholder-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 246</span>
+246:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">placeholder</span>(<span class="ruby-identifier">identifier</span>)
+247:       <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">identifier</span>
+248:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="text-method" class="method-detail ">
+				<a name="M000014"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 235</span>
+235:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+236:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span> <span class="ruby-keyword kw">then</span>
+237:         <span class="ruby-identifier">indent</span>, <span class="ruby-identifier">text</span> = <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>
+238:         <span class="ruby-identifier">text</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/^/</span>, <span class="ruby-identifier">indent</span>)
+239:       <span class="ruby-keyword kw">else</span>
+240:         <span class="ruby-identifier">text</span> = <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>
+241:       <span class="ruby-keyword kw">end</span>
+242:       <span class="ruby-ivar">@text</span>     <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">text</span>
+243:       <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">text</span>
+244:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="usage-method" class="method-detail ">
+				<a name="M000010"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">usage</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="usage-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 184</span>
+184:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">usage</span>
+185:       <span class="ruby-ivar">@elements</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">:usage</span>
+186:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="usage-text-method" class="method-detail ">
+				<a name="M000009"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">usage_text</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="usage-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/command/definition.rb, line 138</span>
+138:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">usage_text</span>
+139:       <span class="ruby-identifier">longest_arg_bare</span> = <span class="ruby-ivar">@elements</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-constant">Argument</span>).<span class="ruby-identifier">max</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+140:         <span class="ruby-identifier">a</span>.<span class="ruby-identifier">bare</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">bare</span>.<span class="ruby-identifier">size</span>
+141:       }
+142:       <span class="ruby-identifier">longest_option</span> = <span class="ruby-ivar">@elements</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-constant">Option</span>).<span class="ruby-identifier">max</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+143:         <span class="ruby-identifier">a</span>.<span class="ruby-identifier">declaration</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">declaration</span>.<span class="ruby-identifier">size</span>
+144:       }
+145:       <span class="ruby-identifier">longest_env_name</span> = <span class="ruby-ivar">@elements</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-constant">Env</span>).<span class="ruby-identifier">max</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+146:         <span class="ruby-identifier">a</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">b</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">size</span>
+147:       }
+148:       <span class="ruby-identifier">longest_arg_bare</span> = <span class="ruby-identifier">longest_arg_bare</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">longest_arg_bare</span>.<span class="ruby-identifier">bare</span>.<span class="ruby-identifier">size</span>
+149:       <span class="ruby-identifier">longest_option</span>   = <span class="ruby-identifier">longest_option</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">longest_option</span>.<span class="ruby-identifier">declaration</span>.<span class="ruby-identifier">size</span>
+150:       <span class="ruby-identifier">longest_env_name</span> = <span class="ruby-identifier">longest_env_name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">longest_env_name</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">size</span>
+151:       <span class="ruby-identifier">arguments</span> = <span class="ruby-ivar">@elements</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-constant">Argument</span>)
+152: 
+153:       <span class="ruby-ivar">@elements</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+154:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">e</span>
+155:           <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">:usage</span>
+156:             <span class="ruby-node">&quot;Usage: #{File.basename($0)} #{arguments.map{|a|a.usage}.join(' ')}\n&quot;</span>
+157:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Symbol</span>
+158:             <span class="ruby-node">&quot;  #{e.inspect}\n&quot;</span>
+159:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Option</span>
+160:             <span class="ruby-identifier">sprintf</span> <span class="ruby-value str">&quot;  %*s%s\n&quot;</span>,
+161:                     <span class="ruby-operator">-</span>(<span class="ruby-identifier">longest_option</span><span class="ruby-operator">+</span><span class="ruby-value">2</span>),
+162:                     <span class="ruby-identifier">e</span>.<span class="ruby-identifier">declaration</span>,
+163:                     <span class="ruby-identifier">e</span>.<span class="ruby-identifier">description</span>
+164:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Env</span>
+165:             <span class="ruby-identifier">sprintf</span> <span class="ruby-value str">&quot;* %*s%s\n&quot;</span>,
+166:                     <span class="ruby-operator">-</span><span class="ruby-identifier">longest_env_name</span><span class="ruby-operator">-</span><span class="ruby-value">2</span>,
+167:                     <span class="ruby-identifier">e</span>.<span class="ruby-identifier">name</span>,
+168:                     <span class="ruby-ivar">@options_by_name</span>[<span class="ruby-identifier">e</span>.<span class="ruby-identifier">map</span>].<span class="ruby-identifier">description</span>
+169:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>
+170:             <span class="ruby-identifier">e</span><span class="ruby-operator">+</span><span class="ruby-value str">&quot;\n&quot;</span>
+171:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Argument</span>
+172:             <span class="ruby-identifier">indent</span> = <span class="ruby-value str">&quot;\n     &quot;</span><span class="ruby-operator">+</span>(<span class="ruby-value str">&quot; &quot;</span><span class="ruby-operator">*</span><span class="ruby-identifier">longest_arg_bare</span>)
+173:             <span class="ruby-identifier">sprintf</span> <span class="ruby-value str">&quot;  %*s%s\n&quot;</span>,
+174:                     <span class="ruby-operator">-</span>(<span class="ruby-identifier">longest_arg_bare</span><span class="ruby-operator">+</span><span class="ruby-value">3</span>),
+175:                     <span class="ruby-node">&quot;#{e.bare}:&quot;</span>,
+176:                     <span class="ruby-identifier">e</span>.<span class="ruby-identifier">description</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\n/</span>, <span class="ruby-identifier">indent</span>)
+177:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Definition</span>
+178:           <span class="ruby-keyword kw">else</span>
+179:             <span class="ruby-node">&quot;unimplemented(#{e.class})&quot;</span>
+180:         <span class="ruby-keyword kw">end</span>
+181:       }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">''</span>)
+182:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

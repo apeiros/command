@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: Notes.rdoc [command-0.0.1 Documentation]</title>
+
+	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../MANIFEST_txt.html">MANIFEST.txt</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../doc/Notes_rdoc.html">Notes.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Command.html">Command</a></li>
+				
+					<li><a href="../Command/DecoratingHash.html">Command::DecoratingHash</a></li>
+				
+					<li><a href="../Command/Definition.html">Command::Definition</a></li>
+				
+					<li><a href="../Command/DirectoryNotFoundError.html">Command::DirectoryNotFoundError</a></li>
+				
+					<li><a href="../Command/FileNotFoundError.html">Command::FileNotFoundError</a></li>
+				
+					<li><a href="../Command/NoDirectoryError.html">Command::NoDirectoryError</a></li>
+				
+					<li><a href="../Command/NoFileError.html">Command::NoFileError</a></li>
+				
+					<li><a href="../Command/Parser.html">Command::Parser</a></li>
+				
+					<li><a href="../Command/VERSION.html">Command::VERSION</a></li>
+				
+					<li><a href="../Kernel.html">Kernel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>MAIN</h1>
+<h2>Terminology</h2>
+<p>
+Example: `baretest run -i &#8212;formatter cli somefile/to/run.rb`
+</p>
+<ul>
+<li>Command: words before any flags/options - determine what you want to do
+
+<pre>
+              options and arguments can be command-specific.
+              In the example, 'run' is a command.
+</pre>
+</li>
+<li>Option: Short and Long options
+
+</li>
+<li>Short option: An option consisting only of a dash and the option-character.
+
+<pre>
+              The option-character may be any alphanumeric character (A-Za-z0-9)
+              In the example, '-i' is a short option.
+              Short options can be &quot;stacked&quot;.
+              Examples:
+                '-a -b -c' is equivalent to '-abc'
+                '-a foo -c bar' is equivalent to '-ac foo bar'
+              Important: you can only stack options which have either no
+              value or a required value. You must not stack options with
+              optional value.
+</pre>
+</li>
+<li>Long option: An option consisting of a double-dash and the option
+identifier.
+
+<pre>
+              The option identifier must start with an alphanumeric character
+              and may be between 0 and 255 chars long and may contain any
+              alphanumeric character or dash (A-Za-z0-9-)
+              In the example, &quot;--formatter&quot; is a long option.
+</pre>
+</li>
+<li>Value: Options can have no, an optional or a required value.
+
+<pre>
+              A value may be either a word or a quoted string (shell rules apply)
+              In the example, &quot;cli&quot; is the value of the &quot;--formatter&quot; option.
+</pre>
+</li>
+<li>Argument: Arguments are the rest in the argv array.
+
+<pre>
+              In the example, &quot;somefile/to/run.rb&quot; is an argument.
+              Arguments may be separated from commands and options by a &quot;--&quot;
+              F.ex.: &quot;baretest -- -f&quot; - '-f' is an argument there and not an
+              option.
+</pre>
+</li>
+</ul>
+<h2>Things to remember:</h2>
+<ul>
+<li>&#8220;&#8212;&#8221; marks the end of options-part
+
+</li>
+<li>&#8220;-abc&#8221; arg1 arg2 arg3 is the equivalent to -a arg1 -b arg2 -c
+arg3 (only possible with fixed arity)
+
+</li>
+<li>commands can define additional options
+
+</li>
+<li>options can define additional options
+
+</li>
+</ul>
+<p>
+commands:
+</p>
+<pre>
+  commands MUST be the first values in argv, no flags before/in-between allowed
+</pre>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+
